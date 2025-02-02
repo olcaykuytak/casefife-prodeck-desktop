@@ -1,0 +1,433 @@
+.app-center-area-sound-effects {
+    display: flex;
+    height: calc(100vh - 50px);
+}
+
+.app-center-area-sound-effects-container {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    width: calc(100% - 355px);
+    margin: 0;
+    grid-gap: 20px;
+    padding: 20px;
+    height: 552px;
+}
+
+.app-center-area-sound-effects-container::-webkit-scrollbar {
+    width: .5em;
+}
+ 
+.app-center-area-sound-effects-container::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+ 
+.app-center-area-sound-effects-container::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,.05);
+  border-radius: 10px;
+}
+
+.app-center-area-sound-effects-container-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ffffff1f;
+}
+
+.app-center-area-sound-effects-container-header-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin-right: 20px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,.3);
+    color: #fff;
+    font-weight: 900;
+    font-size: 10pt;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+}
+
+.app-center-area-sound-effects-container-header-btn-stop {
+    background-color: #673AB7 !important;
+}
+
+.app-center-area-sound-effects-container-header-btn:hover {
+    opacity: 0.7;
+}
+
+.app-center-area-sound-effects-container-header-btn i {
+    margin-right: 10px;
+}
+
+.app-center-area-sound-effects-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    grid-gap: 10px 20px;
+    overflow: visible;
+}
+
+.app-center-area-sound-effects-list::after {
+    content: '';
+    height: 100px;
+    width: 891px;
+    left: 243.28px;
+    bottom: 50px;
+    background: linear-gradient(360deg, #000000e0, transparent);
+    position: fixed;
+}
+
+.app-center-area-sound-effects-list-btn {
+    height: 215px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 154px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+    position: relative;
+    overflow: visible;
+}
+
+.app-center-area-sound-effects-list-btn-active {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #717e85;
+    right: -10px;
+    top: -10px;
+    color: #fff;
+    transition: 250ms ease-in-out;
+}
+
+.app-center-area-sound-effects-list-btn:last-child {
+    margin-bottom: 130px;
+}
+
+.app-center-area-sound-effects-list-btn:hover {
+    opacity: 0.6;
+}
+
+.app-center-area-sound-effects-settings-id {
+    display: none;
+}
+
+.app-center-area-sound-effects-list-btn-play {
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
+
+.app-center-area-sound-effects-list-btn-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 170px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgba(217, 217, 217, 0.05);
+    font-size: 54px;
+    box-sizing: border-box;
+}
+
+.app-center-area-sound-effects-list-btn-img-selected {
+    border: 10px solid rgba(145, 145, 145, .3);
+    border-bottom: none;
+}
+
+.app-center-area-sound-effects-list-btn-color {
+    display: inline-block;
+    width: 100%;
+    height: 10px;
+    background-color: #673AB7;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* ------------------------------- */
+
+.app-center-area-sound-effects-settings-btn-color {
+    width: 100%;
+}
+
+.app-center-area-sound-effects-settings-btn-color-selected {
+    height: 46px;
+    width: 225px;
+    background-color: #ffffff1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, .75);
+    font-size: 12pt;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 250ms ease-in-out;
+}
+
+.app-center-area-sound-effects-settings-btn-color-selected:hover {
+    opacity: 0.6;
+}
+
+.app-center-area-sound-effects-settings-btn-color-selected-active {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.color-cube {
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
+    margin-right: 15px;
+    border: none;
+    background: red;
+    cursor: pointer;
+    outline: none;
+    color: transparent;
+    padding: 0;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    pointer-events: none;
+}
+
+.app-center-area-sound-effects-settings-btn-color-palette {
+    background-color: #212121;
+    position: absolute;
+    top: 407px;
+    left: 944px;
+    right: 45px;
+    display: none;
+    flex-wrap: wrap;
+    grid-gap: 15px;
+    padding: 15px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 132px;
+    overflow-y: scroll;
+    box-shadow: inset 0px 20px 17px 4px #00000042;
+    transition: 250ms ease-in-out;
+}
+
+.app-center-area-sound-effects-settings-btn-color-palette.active {
+    display: flex;
+}
+
+.app-center-area-sound-effects-settings-btn-color-palette::-webkit-scrollbar {
+    width: .5em;
+}
+ 
+.app-center-area-sound-effects-settings-btn-color-palette::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+ 
+.app-center-area-sound-effects-settings-btn-color-palette::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,.05);
+  border-radius: 10px;
+}
+
+.color-square {
+    width: 31px;
+    height: 31px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+    border: 2px solid transparent;
+}
+
+.color-square:hover {
+    opacity: .6;
+}
+
+.selected {
+    border: 2px solid #fff;
+    background: border-box;
+}
+
+
+/* -------------------------------- */
+
+.app-center-area-sound-effects-list-btn-head {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 900;
+    font-size: 12pt;
+    color: #fff;
+}
+
+.app-center-area-sound-effects-list-btn-detail {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: rgba(57, 57, 57, 0.8);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.app-center-area-sound-effects-settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 20px;
+    width: 275px;
+    background-color: #0E0E0E;
+    margin-left: auto;
+    padding: 20px;
+}
+
+.app-center-area-sound-effects-settings-head {
+    font-size: 16pt;
+    font-weight: 900;
+    color: #fff;
+    padding-bottom: 5px;
+}
+
+.app-center-area-sound-effects-settings-detail {
+    color: rgba(255, 255, 255, .3);
+    font-size: 10pt;
+    background-color: rgba(255, 255, 255, .05);
+    border-radius: 5px;
+    border: 1px dashed rgba(255, 255, 255, .1);
+    height: 45px;
+    width: 225px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+}
+
+.app-center-area-sound-effects-settings-detail:hover {
+    opacity: .8;
+}
+
+.app-center-area-sound-effects-settings-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 140px;
+    background-color: rgba(217, 217, 217, 0.05);
+    border-radius: 10px;
+    font-size: 48pt;
+}
+
+.app-center-area-sound-effects-settings-input {
+    display: flex;
+    flex-direction: column;
+    width: 225px;
+}
+
+.app-center-area-sound-effects-settings-input label {
+    font-size: 12pt;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: rgba(57, 57, 57, 0.8);
+}
+
+.app-center-area-sound-effects-settings-input input[type="range"] {
+    accent-color: #673AB7;
+    cursor: pointer;
+}
+
+.app-center-area-sound-effects-settings-input input::-moz-range-track {
+    height: 15px;
+    background: #ccc;
+    border-radius: 16px;
+}
+
+.app-center-area-sound-effects-settings-btn {
+    color: rgba(255,255,255,.75);
+    font-size: 12pt;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, .1);
+    padding: 15px 20px;
+    border-radius: 5px;
+    width: 225px;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+}
+
+.app-center-area-sound-effects-settings-btn:hover {
+    opacity: 0.7;
+}
+
+.save-btn {
+    background-color: #673AB7;
+}
+
+.sound-effect-macro-keyboard {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(2px);
+    width: 100%;
+    height: calc(100vh - 50px);
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.sound-effect-macro-keyboard-active {
+    display: flex;
+}
+
+.sound-effect-macro-keyboard-container-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18pt;
+    font-weight: bold;
+    height: 75px;
+}
+
+.sound-effect-macro-keyboard-container-btn {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.sound-effect-macro-keyboard-container-btn-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    width: 90px;
+    border-radius: 5px;
+    background-color: #1D1D1D;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+    font-weight: bold;
+}
+
+.sound-effect-macro-keyboard-container-btn-item:hover {
+    opacity: .7;
+}

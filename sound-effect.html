@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Casefife Prodeck - V1.0</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sound-effect.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+</head>
+<body>
+    <div id="intro" class="intro">
+        <img src="img/cf-white.png" oncontextmenu=" return false"  onselectstart="return false" ondragstart="return false" />
+        <div class="lds-ripple"><div></div><div></div></div>
+    </div>
+    <div class="app">
+        <div class="app-left-area">
+            <div class="app-left-area-top">
+                <img src="img/cf-white.png" oncontextmenu="return false"  onselectstart="return false" ondragstart="return false"/>
+                <h1>CASEFIFE Inc. - V1.0</h1>
+            </div>
+            <div class="app-left-area-menu">
+                <button onclick="navigateTo('index.html')" class="app-left-area-menu-item"><i class="fa-solid fa-wand-magic-sparkles"></i> CREATOR</button>
+                <button onclick="navigateTo('sound-effect.html')" class="app-left-area-menu-item app-left-area-menu-item-active"><i class="fa-solid fa-music"></i> SOUND EFFECT</button>
+                <!--<button disabled onclick="navigateTo('sound-effect.html')" class="app-left-area-menu-item disabled"><i class="fa-solid fa-microphone"></i> VOICE CHANGER</button>-->
+                <button onclick="navigateTo('control.html')" class="app-left-area-menu-item"><i class="fa-solid fa-sliders"></i> CONTROL</button>
+                <!--<button class="app-left-area-menu-item"><i class="fa-solid fa-wave-square"></i> MIDI</button>-->
+                <!--<button class="app-left-area-menu-item"><i class="fa-solid fa-table-cells"></i> LAUNCHPAD</button>-->
+                <button onclick="navigateTo('settings.html')" class="app-left-area-menu-item"><i class="fa-solid fa-gear"></i> SETTINGS</button>
+            </div>
+            <div class="app-left-area-bottom-account">
+                <div class="app-left-area-bottom-account-img">
+                    <img src="img/profile.webp" oncontextmenu="return false"  onselectstart="return false" ondragstart="return false"/>
+                </div>
+                <button class="app-left-area-bottom-account-detail">
+                    <h3>Olci</h3>
+                    <p>@olcaykuytak</p>
+                </button>
+            </div>
+        </div>
+        
+        <div class="app-center-area">
+            <div id="no-connecting" class="no-connecting">
+                <div class="no-connecting-area">
+                    <div class="no-connecting-area-brand"><img src="img/cf-white.png" alt=""></div>
+                    <p>Your <b>Casefife Prodeck</b> device is not connected to your computer!</p>
+                    <ul class="no-connecting-area-nav">
+                        <li><a href="https://www.kickstarter.com/" target="_parent">Click if you haven't bought it yet!</a></li>
+                        <li><a href="https://casefife.com/" target="_parent">Let us know if you think there is a problem</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="sound-effect-macro-keyboard" class="sound-effect-macro-keyboard">
+                <div class="sound-effect-macro-keyboard-container">
+                    <div class="sound-effect-macro-keyboard-container-head">SELECT BUTTON</div>
+                    <div class="sound-effect-macro-keyboard-container-btn">
+                        <div class="sound-effect-macro-keyboard-container-btn-item">BTN1</div>
+                        <div class="sound-effect-macro-keyboard-container-btn-item">BTN2</div>
+                        <div class="sound-effect-macro-keyboard-container-btn-item">BTN3</div>
+                        <div class="sound-effect-macro-keyboard-container-btn-item">BTN4</div>
+                        <div class="sound-effect-macro-keyboard-container-btn-item">BTN5</div>
+                        <div class="sound-effect-macro-keyboard-container-btn-item">BTN6</div>
+                        <div class="sound-effect-macro-keyboard-container-btn-item">BTN7</div>
+                        <div class="sound-effect-macro-keyboard-container-btn-item">BTN8</div>
+                        <div class="sound-effect-macro-keyboard-container-btn-item">BTN9</div>
+                        <div class="sound-effect-macro-keyboard-container-btn-item">BTN10</div>
+                        <div class="sound-effect-macro-keyboard-container-btn-item">BTN11</div>
+                        <div class="sound-effect-macro-keyboard-container-btn-item">BTN12</div>
+                        <div class="sound-effect-macro-keyboard-container-btn-item">BTN13</div>
+                        <div class="sound-effect-macro-keyboard-container-btn-item">BTN14</div>
+                        <div class="sound-effect-macro-keyboard-container-btn-item">BTN15</div>
+                        <div class="sound-effect-macro-keyboard-container-btn-item">BTN16</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-center-area-sound-effects">
+                <div class="app-center-area-sound-effects-container">
+                    <div class="app-center-area-sound-effects-container-header">
+                        <button class="app-center-area-sound-effects-container-header-btn app-center-area-sound-effects-container-header-btn-stop"><i class="fa-solid fa-stop"></i> Stop All Sounds</button>
+                        <button class="app-center-area-sound-effects-container-header-btn"><i class="fa-solid fa-circle-dot"></i> Reset Keybinds</button>
+                        <button class="app-center-area-sound-effects-container-header-btn"><i class="fa-solid fa-volume-xmark"></i> Mute For Me</button>
+                    </div>
+                    <div id="app-center-area-sound-effects-list" class="app-center-area-sound-effects-list"></div>
+                </div>
+                <div id="app-center-area-sound-effects-settings" class="app-center-area-sound-effects-settings">
+                    <input type="text" id="id" class="app-center-area-sound-effects-settings-id">
+                    <div id="img" class="app-center-area-sound-effects-settings-img"></div>
+                    <div id="head" class="app-center-area-sound-effects-settings-head"></div>
+                    <div id="detail" class="app-center-area-sound-effects-settings-detail"></div>
+                    <div class="app-center-area-sound-effects-settings-input">
+                        <label for="volume">Voice Volume</label>
+                        <input type="range" id="volume" name="volume" min="0" max="100" />
+                    </div>
+                    
+                    <div class="app-center-area-sound-effects-settings-btn-color">
+                        <div class="app-center-area-sound-effects-settings-btn-color-selected"> 
+                            <input type="text" value="" id="color-cube" class="color-cube" readonly>
+                            Select LED Color
+                        </div>
+                        <div id="colorPalette" class="app-center-area-sound-effects-settings-btn-color-palette"></div>
+                    </div>
+
+                    <button id="restore-btn" class="app-center-area-sound-effects-settings-btn">Restore</button>
+                    <button id="save-btn" class="app-center-area-sound-effects-settings-btn save-btn">Save Settings</button>
+                </div>
+            </div>
+
+            <div class="app-center-area-bottom">
+
+                <div class="app-center-area-bottom-item">
+                    <div class="app-center-area-bottom-item-connect"><span id="status"></span></div>
+                </div>
+
+                <div class="app-center-area-bottom-item">
+                    <input id="app-center-area-bottom-item-light-toggle" class="app-center-area-bottom-item-toggle" type="checkbox" checked>
+                    <label for="keyboard-lights">KEYBOARD LIGHTS</label>
+                </div>
+
+                <div class="app-center-area-bottom-item">
+                    <input id="app-center-area-bottom-item-function-toggle" class="app-center-area-bottom-item-toggle" type="checkbox"  >
+                    <label for="disable-funcitons">DISABLE ALL FUNCTIONS</label>
+                </div>
+
+                <div class="app-center-area-bottom-item-right"><a href="https://discord.gg/J3zs3EUQPN" target="parent"><i class="fa-brands fa-discord"></i> JOIN OUR COMMUNITY!</a></div>
+            </div>
+        </div>
+
+        <script src="renderer.js"></script>
+        <script>
+            function navigateTo(page) {
+                window.location.href = page;
+            }
+
+            document.querySelector('.app-center-area-sound-effects-settings-btn-color-selected').addEventListener('click', function() {
+                document.getElementById('colorPalette').classList.toggle('active');
+                document.querySelector('.app-center-area-sound-effects-settings-btn-color-selected').classList.toggle('app-center-area-sound-effects-settings-btn-color-selected-active');
+            });
+
+
+            const colorSelector = document.getElementById("colorSelector");
+            const colorPalette = document.getElementById("colorPalette");
+            const colorCube = document.getElementById('color-cube');         
+            let selectedColor = null;
+
+            // 16 farklı renk tanımlayalım
+            const colors = [
+                "#f44336", "#e91e63", "#9c27b0", "#673ab7",
+                "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4",
+                "#009688", "#4caf50", "#8bc34a", "#cddc39",
+                "#ff9800", "#ff9800", "#9e9e9e", "#607d8b", 
+                "#e91e63", "#9c27b0", "#673ab7", "#3f51b5",
+                "#2196f3", "#03a9f4", "#00bcd4", "#009688",
+                "#4caf50", "#8bc34a", "#cddc39", "#ff9800",
+                "#ff9800", "#9e9e9e", "#607d8b"
+            ];
+
+            // Renk karelerini oluştur
+            colors.forEach(color => {
+              const square = document.createElement("div");
+              square.classList.add("color-square");
+              square.style.backgroundColor = color;
+
+            square.addEventListener("click", () => {
+                document.querySelectorAll(".color-square").forEach(sq => sq.classList.remove("selected"));
+                square.classList.add("selected");
+
+                colorCube.value = color;
+                colorCube.style.backgroundColor = color;
+
+                // Seçilen karenin rengini al ve sakla
+                selectedColor = square.style.backgroundColor;
+            });
+          
+              colorPalette.appendChild(square);
+            });
+        
+            const soundEffectKeybind = document.getElementById("detail");
+            const soundEffectMacroKeyboard = document.getElementById("sound-effect-macro-keyboard");
+
+            soundEffectKeybind.addEventListener('click', function() {
+                soundEffectMacroKeyboard.classList.add("sound-effect-macro-keyboard-active");
+            });
+
+            document.querySelectorAll('.sound-effect-macro-keyboard-container-btn-item').forEach(item => {
+                item.addEventListener('click', function () {
+                    // "sound-effect-macro-keyboard-active" classını kaldır
+                    const activeElement = document.querySelector('.sound-effect-macro-keyboard-active');
+                    if (activeElement) {
+                        activeElement.classList.remove('sound-effect-macro-keyboard-active');
+                    }
+                
+                    // Tıklanan elemana "sound-effect-macro-keyboard-active" classını ekle
+                    this.classList.add('sound-effect-macro-keyboard-active');
+                
+                    // Tıklanan elemanın içeriğini #detail içine yaz
+                    const detailDiv = document.getElementById('detail');
+                    if (detailDiv) {
+                        detailDiv.textContent = this.textContent;
+                    }
+                });
+            });
+
+            //sound-effect.html KODLARI//
+
+            ipcRenderer.invoke('get-json-data').then(jsonData => {  
+            
+            const container = document.getElementById('app-center-area-sound-effects-list');
+            
+            jsonData.soundEffect.forEach(item => {
+                 // Her bir öğe için buton oluştur
+                 const button = document.createElement('button');
+                 button.id = item.id;
+                 button.className = 'app-center-area-sound-effects-list-btn';
+
+                 const playDiv = document.createElement('div');
+                 playDiv.className = 'app-center-area-sound-effects-list-btn-play';
+                 playDiv.innerHTML = '<i class="fa-solid fa-pause"></i>';
+            
+                 // Icon div
+                 const iconDiv = document.createElement('div');
+                 iconDiv.className = 'app-center-area-sound-effects-list-btn-img';
+                 iconDiv.textContent = item.img || '⛔';  // JSON'dan icon al, yoksa varsayılan
+            
+                 // Color div
+                 const colorDiv = document.createElement('div');
+                 colorDiv.className = 'app-center-area-sound-effects-list-btn-color';
+                 colorDiv.style.backgroundColor = item.color || '#000';  // JSON'dan renk al, yoksa varsayılan
+            
+                 // Head div
+                 const headDiv = document.createElement('div');
+                 headDiv.className = 'app-center-area-sound-effects-list-btn-head';
+                 headDiv.textContent = item.head || 'Nay';  // JSON'dan başlık al, yoksa varsayılan
+            
+                 // Detail div
+                 const detailDiv = document.createElement('div');
+                 detailDiv.className = 'app-center-area-sound-effects-list-btn-detail';
+                 detailDiv.textContent = item.keybind || 'Add Keybind';  // JSON'dan detay al, yoksa varsayılan
+            
+                 // Buton içerisine div'leri ekle
+                 button.appendChild(playDiv);
+                 button.appendChild(iconDiv);
+                 button.appendChild(colorDiv);
+                 button.appendChild(headDiv);
+                 button.appendChild(detailDiv);
+            
+                 // Container'a butonu ekle
+                 container.appendChild(button);
+            });
+
+            const soundEffectItem = jsonData.soundEffect.find(seItem => seItem.id == 1);
+
+            document.getElementById('id').value = soundEffectItem.id;
+            document.getElementById('img').textContent = soundEffectItem.img;
+            document.getElementById('head').textContent = soundEffectItem.name;
+            document.getElementById('detail').textContent = soundEffectItem.keybind;
+            document.getElementById('volume').value = soundEffectItem.volume;
+            document.getElementById("color-cube").value = soundEffectItem.color;
+            document.getElementById("color-cube").style.backgroundColor = soundEffectItem.color;
+
+            const divElement = document.querySelector('.app-center-area-sound-effects-list-btn-img');
+            divElement.classList.add('app-center-area-sound-effects-list-btn-img-selected');
+
+            document.querySelectorAll('button').forEach(button => {
+                button.addEventListener('click', function() {
+                
+                const buttonId = this.id;
+                console.log(buttonId);
+                
+                // app-center-area-sound-effects-list-btn-img-selected class'ına sahip elementi seçiyoruz
+                const selectedElement = document.querySelector('.app-center-area-sound-effects-list-btn-img-selected');
+                
+                // Eğer element mevcutsa, class'ı siliyoruz
+                if (selectedElement) {
+                    selectedElement.classList.remove('app-center-area-sound-effects-list-btn-img-selected');
+                }
+            
+                // buttonId değişkenini kullanarak o id'ye sahip butonu seçiyoruz
+                const targetButton = document.getElementById(buttonId.toString());
+            
+                // Eğer buton mevcutsa, içerisindeki app-center-area-sound-effects-list-btn-img class'ına sahip div'i buluyoruz
+                if (targetButton) {
+                    const targetDiv = targetButton.querySelector('.app-center-area-sound-effects-list-btn-img');
+                
+                    // Eğer div mevcutsa, ona app-center-area-sound-effects-list-btn-img-selected class'ını ekliyoruz
+                    if (targetDiv) {
+                        targetDiv.classList.add('app-center-area-sound-effects-list-btn-img-selected');
+                    }
+                }
+            
+                ipcRenderer.invoke('get-json-data').then(jsonData => {
+                    const soundEffectItem = jsonData.soundEffect.find(seItem => seItem.id == buttonId);
+                
+                    document.getElementById('id').value = soundEffectItem.id;
+                    document.getElementById('img').textContent = soundEffectItem.img;
+                    document.getElementById('head').textContent = soundEffectItem.name;
+                    document.getElementById('detail').textContent = soundEffectItem.keybind;
+                    document.getElementById('volume').value = soundEffectItem.volume;
+                    document.getElementById("color-cube").value = soundEffectItem.color;
+                    document.getElementById("color-cube").style.backgroundColor = soundEffectItem.color;
+                });
+                });
+            });
+
+            });
+
+            const soundEffectsDiv = document.getElementById('app-center-area-sound-effects-settings');
+            const inputs = soundEffectsDiv.querySelectorAll('input[type="range"]'); // Örneğin, volume input'ları slider olabilir.
+
+            // Önce save-btn butonunu seçiyoruz
+            const saveButton = document.getElementById('save-btn');
+
+            // save-btn butonuna click event listener ekliyoruz
+            saveButton.addEventListener('click', () => {
+            // Ana divi seçiyoruz
+            const parentDiv = document.getElementById('app-center-area-sound-effects-settings');
+            
+            // 'id', 'volume', ve 'color' inputlarını buluyoruz
+            const inputElement = parentDiv.querySelector('#id');
+            const inputVol = parentDiv.querySelector('#volume');
+            const inputClr = parentDiv.querySelector('#color-cube');
+            
+            // input değerlerini alıyoruz
+            const inputID = inputElement.value;
+            const inputDetail = parentDiv.querySelector('#detail').textContent;
+            const inputVolume = inputVol.value;
+            const inputColor = inputClr.value;
+            
+            location.reload();
+            
+            // ipcRenderer ile verileri gönderiyoruz
+            ipcRenderer.invoke('update-sound-effect', { id: inputID, keybind: inputDetail, volume: inputVolume, color: inputColor });
+            });
+
+            const restoreButton = document.getElementById('restore-btn');
+
+            restoreButton.addEventListener('click', () => {
+            
+            const parentDiv = document.getElementById('app-center-area-sound-effects-settings');
+            
+            // 'id', 'volume', ve 'color' inputlarını buluyoruz
+            const inputElement = parentDiv.querySelector('#id');
+            
+            // input değerlerini alıyoruz
+            const inputID = inputElement.value;
+            const inputVolume = "50";
+            const inputColor = "#f44336";
+            
+            location.reload();
+            
+            // ipcRenderer ile verileri gönderiyoruz
+            ipcRenderer.invoke('update-sound-effect', { id: inputID, volume: inputVolume, color: inputColor });
+            });
+
+            ipcRenderer.on('serial-port-data', (event, data) => {
+                const dataSp = data.toString().trim();
+
+                if (dataSp) {
+                  const targetDetail = Array.from(
+                    document.querySelectorAll(".app-center-area-sound-effects-list-btn-detail")
+                  ).find((el) => el.textContent.trim() === dataSp);
+                                
+                  if (targetDetail) {
+                    const playDiv = targetDetail
+                      .closest(".app-center-area-sound-effects-list-btn")
+                      .querySelector(".app-center-area-sound-effects-list-btn-play");
+                
+                    playDiv.style.display = "flex";
+                
+                    setTimeout(() => {
+                      playDiv.style.display = "none";
+                    }, 5000); // 5 saniye
+                  }
+                }
+
+            });
+        </script>
+</body>
+</html>

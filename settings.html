@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Casefife Prodeck - V1.0</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+</head>
+<body>
+    <div id="intro" class="intro">
+        <img src="img/cf-white.png" oncontextmenu=" return false"  onselectstart="return false" ondragstart="return false" />
+        <div class="lds-ripple"><div></div><div></div></div>
+    </div>
+    <div class="app">
+        <div class="app-left-area">
+            <div class="app-left-area-top">
+                <img src="img/cf-white.png" oncontextmenu="return false"  onselectstart="return false" ondragstart="return false"/>
+                <h1>CASEFIFE Inc. - V1.0</h1>
+            </div>
+            <div class="app-left-area-menu">
+                <button onclick="navigateTo('index.html')" class="app-left-area-menu-item"><i class="fa-solid fa-wand-magic-sparkles"></i> CREATOR</button>
+                <button onclick="navigateTo('sound-effect.html')" class="app-left-area-menu-item"><i class="fa-solid fa-music"></i> SOUND EFFECT</button>
+                <!--<button disabled onclick="navigateTo('sound-effect.html')" class="app-left-area-menu-item disabled"><i class="fa-solid fa-microphone"></i> VOICE CHANGER</button>-->
+                <button onclick="navigateTo('control.html')" class="app-left-area-menu-item"><i class="fa-solid fa-sliders"></i> CONTROL</button>
+                <!--<button class="app-left-area-menu-item"><i class="fa-solid fa-wave-square"></i> MIDI</button>-->
+                <!--<button class="app-left-area-menu-item"><i class="fa-solid fa-table-cells"></i> LAUNCHPAD</button>-->
+                <button onclick="navigateTo('settings.html')" class="app-left-area-menu-item app-left-area-menu-item-active"><i class="fa-solid fa-gear"></i> SETTINGS</button>
+            </div>
+            <div class="app-left-area-bottom-account">
+                <div class="app-left-area-bottom-account-img">
+                    <img src="img/profile.webp" oncontextmenu="return false"  onselectstart="return false" ondragstart="return false"/>
+                </div>
+                <button class="app-left-area-bottom-account-detail">
+                    <h3>Olci</h3>
+                    <p>@olcaykuytak</p>
+                </button>
+            </div>
+        </div>
+        
+        <div class="app-center-area">
+            <div id="no-connecting" class="no-connecting">
+                <div class="no-connecting-area">
+                    <div class="no-connecting-area-brand"><img src="img/cf-white.png" alt=""></div>
+                    <p>Your <b>Casefife Prodeck</b> device is not connected to your computer!</p>
+                    <ul class="no-connecting-area-nav">
+                        <li><a href="https://www.kickstarter.com/" target="_parent">Click if you haven't bought it yet!</a></li>
+                        <li><a href="https://casefife.com/" target="_parent">Let us know if you think there is a problem</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="app-center-area-creator">
+                <div class="settings-area">
+                    <div class="settings-main-head">DEVICE SETTINGS</div>
+                    <div class="settings-area">
+                        <div class="settings-area-set">
+                            <div class="settings-area-set-head">KEYBOARD LIGHT MODE:</div>
+                            <div class="settings-area-set-input">
+                                <div id="keyboard-light-mode-id" class="keyboard-light-mode">STATIC <i class="fa-solid fa-chevron-down"></i></div>
+                                <div id="keyboard-light-mode-list-id" class="keyboard-light-mode-list">
+                                    <div id="keyboard-light-mode-list-item-static" class="keyboard-light-mode-list-item">STATIC</div>
+                                    <div id="keyboard-light-mode-list-item-fade" class="keyboard-light-mode-list-item">FADE</div>
+                                    <div id="keyboard-light-mode-list-item-rainbow" class="keyboard-light-mode-list-item">RAINBOW</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="settings-area-set">
+                            <div class="settings-area-set-head">KEYBOARD LEDS:</div>
+                            <div class="settings-area-set-input">
+                                <div id="settings-area-set-input-buttons" class="settings-area-set-input-buttons">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="settings-right">
+                    <div id="setting-select-color-id"></div>
+                    <div id="setting-select-view" class="setting-select-view">#1</div>
+                    <div class="setting-select-color-head">SELECT COLORS</div>
+                    <div id="setting-select-color" class="setting-select-colors">
+                        <div class="setting-select-colors-item" style="background-color: #f44336;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #e91e63;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #9c27b0;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #673ab7;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #3f51b5;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #2196f3;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #03a9f4;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #00bcd4;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #009688;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #4caf50;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #8bc34a;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #cddc39;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #ff9800;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #9e9e9e;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #607d8b;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #e91e63;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #9c27b0;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #673ab7;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #3f51b5;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #2196f3;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #03a9f4;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #00bcd4;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #009688;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #4caf50;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #03a9f4;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #00bcd4;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #009688;"></div>
+                        <div class="setting-select-colors-item" style="background-color: #4caf50;"></div>
+                    </div>
+                    <div id="save-settings" class="setting-select-save">SAVE SETTINGS</div>
+                </div>
+            </div>
+
+            <div class="app-center-area-bottom">
+
+                <div class="app-center-area-bottom-item">
+                    <div class="app-center-area-bottom-item-connect"><span id="status"></span></div>
+                </div>
+
+                <div class="app-center-area-bottom-item">
+                    <input id="app-center-area-bottom-item-light-toggle" class="app-center-area-bottom-item-toggle" type="checkbox" checked>
+                    <label for="keyboard-lights">KEYBOARD LIGHTS</label>
+                </div>
+
+                <div class="app-center-area-bottom-item">
+                    <input id="app-center-area-bottom-item-function-toggle" class="app-center-area-bottom-item-toggle" type="checkbox"  >
+                    <label for="disable-funcitons">DISABLE ALL FUNCTIONS</label>
+                </div>
+
+                <div class="app-center-area-bottom-item-right"><a href="https://discord.gg/J3zs3EUQPN" target="parent"><i class="fa-brands fa-discord"></i> JOIN OUR COMMUNITY!</a></div>
+            </div>
+        </div>
+
+        <script src="renderer.js"></script>
+        <script>
+            function navigateTo(page) {
+                window.location.href = page;
+            }
+
+            const keyboardLightModeBTN = document.getElementById("keyboard-light-mode-id");
+            const keyboardLightModeList = document.getElementById("keyboard-light-mode-list-id");
+            const keyboardLightModeListItem = document.getElementById("keyboard-light-mode-list-item");
+
+            keyboardLightModeBTN.addEventListener('click', function() {
+                keyboardLightModeList.classList.toggle("keyboard-light-mode-list-active");
+            });
+
+            ipcRenderer.invoke('settings-json-data').then(jsonData => { 
+                const lightMode = jsonData.settingsDevice[0].lightMode;
+                keyboardLightModeBTN.textContent = lightMode;
+                keyboardLightModeBTN.insertAdjacentHTML('beforeend', ' <i class="fa-solid fa-chevron-down"></i>');
+            });
+
+            // Event delegation kullanarak tüm item'ları dinle
+            keyboardLightModeList.addEventListener('click', (event) => {
+                // Tıklanan öğeyi al
+                keyboardLightModeList.classList.remove("keyboard-light-mode-list-active");
+                const clickedItem = event.target;
+            
+                // Sadece "keyboard-light-mode-list-item" sınıfına sahip elemanlarda işlem yap
+                if (clickedItem.classList.contains('keyboard-light-mode-list-item')) {
+                    // Tıklanan item'ın id'sini ve içeriğini al
+                    const itemId = clickedItem.id;
+                    const itemText = clickedItem.textContent;
+
+                    keyboardLightModeBTN.textContent = itemText;
+                    keyboardLightModeBTN.insertAdjacentHTML('beforeend', ' <i class="fa-solid fa-chevron-down"></i>');
+                
+                    ipcRenderer.send('lightMode', itemText);
+                    ipcRenderer.invoke('settings-json-update', { id: 1, lightMode: itemText });
+                }
+            });
+
+            const settingSelectColor = document.getElementById("settings-area-set-input-buttons");
+            const settingSelectView = document.getElementById('setting-select-view');
+
+            ipcRenderer.invoke("settings-color-data").then(jsonData => {
+                const settingsDeviceColor = jsonData.settingsDeviceColor;
+
+                jsonData.settingsDeviceColor.forEach(item => {
+                  // Yeni bir div oluşturuyoruz
+                  const div = document.createElement('div');
+                  div.classList.add('settings-area-set-input-buttons-item');
+
+                  // Div'in içine id'yi başına '#' işareti koyarak ekliyoruz
+                  div.textContent = `BTN${item.id}`;
+
+                  div.style.backgroundColor = item.color;
+
+                  // Yeni div'i container'a ekliyoruz
+                  settingSelectColor.appendChild(div);
+
+                  const firstDiv = settingSelectColor.firstElementChild;
+
+                  const colorSelecter = firstDiv.style.backgroundColor;
+                  settingSelectView.style.backgroundColor = colorSelecter;
+
+                });
+            });
+
+            // Ana div'i seç
+            const parentDiv = document.getElementById('settings-area-set-input-buttons');
+                    
+            // Ana div'e tıklama olayını dinle
+            parentDiv.addEventListener('click', function (event) {
+                // Tıklanan elemanın sınıfını kontrol et
+                if (event.target.classList.contains('settings-area-set-input-buttons-item')) {
+                    // Daha önce seçilmiş tüm öğelerin border stilini kaldır
+                    const items = parentDiv.querySelectorAll('.settings-area-set-input-buttons-item');
+                    items.forEach(item => {
+                        item.style.border = ''; // Border stilini kaldır
+                    });
+                
+                    // Tıklanan öğeye border ekle
+                    event.target.style.border = "3px solid #fff";
+                
+                    // Seçilen öğenin stilini ve metnini başka bir div'e aktarma
+                    console.log(event.target.style.cssText);
+                    settingSelectView.textContent = event.target.textContent;
+
+                    const computedStyle = getComputedStyle(event.target);
+
+                    // Yalnızca background-color değerini al
+                    const backgroundColor = computedStyle.backgroundColor;
+
+                    settingSelectView.style.backgroundColor = backgroundColor;
+                }
+            });
+
+            // Ana div'i seç
+            const colorContainer = document.getElementById('setting-select-color');
+
+            // Ana div'e tıklama olayını dinle
+            colorContainer.addEventListener('click', function (event) {
+                // Tıklanan öğeyi kontrol et
+                if (event.target.classList.contains('setting-select-colors-item')) {
+                    // Daha önce aktif olan öğeyi bul ve aktif sınıfını kaldır
+                    const previousActive = document.querySelector('.setting-select-colors-item-active');
+                    if (previousActive) {
+                        previousActive.classList.remove('setting-select-colors-item-active');
+                    }
+                
+                    // Yeni seçilen öğeye aktif sınıfını ekle
+                    event.target.classList.add('setting-select-colors-item-active');
+
+                    const computedStyle = getComputedStyle(event.target);
+
+                    // Yalnızca background-color değerini al
+                    const backgroundColor = computedStyle.backgroundColor;
+
+                    settingSelectView.style.backgroundColor = backgroundColor;
+                    
+                }
+            });
+
+            const saveSettings = document.getElementById("save-settings");
+
+            saveSettings.addEventListener('click', function() {
+                let cleanedText = settingSelectView.textContent.replace('BTN', '');
+                
+                const rgbValue = settingSelectView.style.cssText.match(/rgb\((.*?)\)/)[0]; // "rgb(255, 152, 0)"
+
+                ipcRenderer.invoke('settings-color-update', { id: cleanedText, colorName: rgbValue });
+
+                const cleanValue = settingSelectView.style.cssText.replace("background-color: ","").replace(/rgb\(|\)|;/g,"").replace(/\s+/g, "");
+
+                console.log(cleanValue);
+
+                ipcRenderer.send('ledColor', cleanedText, cleanValue);
+
+                const computedStyle = getComputedStyle(settingSelectView);
+
+                // Yalnızca background-color değerini al
+                const backgroundColor = computedStyle.backgroundColor;
+
+                // Ana div'i seç
+                const parentDiv = document.getElementById('settings-area-set-input-buttons');
+
+                // İçeriğinde #5 olan div'i seç
+                const targetDiv = Array.from(parentDiv.children).find(
+                    (child) => child.textContent.trim() === settingSelectView.textContent
+                );
+
+                if (targetDiv) {
+                    console.log(targetDiv); // Seçilen div
+                    targetDiv.style.backgroundColor = backgroundColor; // Örnek işlem
+                } else {
+                    console.log('Div bulunamadı.');
+                }
+
+            });
+
+        </script>
+</body>
+</html>

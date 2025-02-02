@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Casefife Prodeck - V1.0</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/control.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+</head>
+<body>
+    <div id="intro" class="intro">
+        <img src="img/cf-white.png" oncontextmenu=" return false"  onselectstart="return false" ondragstart="return false" />
+        <div class="lds-ripple"><div></div><div></div></div>
+    </div>
+    <div class="app">
+        <div class="app-left-area">
+            <div class="app-left-area-top">
+                <img src="img/cf-white.png" oncontextmenu="return false"  onselectstart="return false" ondragstart="return false"/>
+                <h1>CASEFIFE Inc. - V1.0</h1>
+            </div>
+            <div class="app-left-area-menu">
+                <button onclick="navigateTo('index.html')" class="app-left-area-menu-item"><i class="fa-solid fa-wand-magic-sparkles"></i> CREATOR</button>
+                <button onclick="navigateTo('sound-effect.html')" class="app-left-area-menu-item"><i class="fa-solid fa-music"></i> SOUND EFFECT</button>
+                <!--<button disabled onclick="navigateTo('sound-effect.html')" class="app-left-area-menu-item disabled"><i class="fa-solid fa-microphone"></i> VOICE CHANGER</button>-->
+                <button onclick="navigateTo('control.html')" class="app-left-area-menu-item app-left-area-menu-item-active"><i class="fa-solid fa-sliders"></i> CONTROL</button>
+                <!--<button class="app-left-area-menu-item"><i class="fa-solid fa-wave-square"></i> MIDI</button>-->
+                <!--<button class="app-left-area-menu-item"><i class="fa-solid fa-table-cells"></i> LAUNCHPAD</button>-->
+                <button onclick="navigateTo('settings.html')" class="app-left-area-menu-item"><i class="fa-solid fa-gear"></i> SETTINGS</button>
+            </div>
+            <div class="app-left-area-bottom-account">
+                <div class="app-left-area-bottom-account-img">
+                    <img src="img/profile.webp" oncontextmenu="return false"  onselectstart="return false" ondragstart="return false"/>
+                </div>
+                <button class="app-left-area-bottom-account-detail">
+                    <h3>Olci</h3>
+                    <p>@olcaykuytak</p>
+                </button>
+            </div>
+        </div>
+        
+        <div class="app-center-area">
+            <div id="no-connecting" class="no-connecting">
+                <div class="no-connecting-area">
+                    <div class="no-connecting-area-brand"><img src="img/cf-white.png" alt=""></div>
+                    <p>Your <b>Casefife Prodeck</b> device is not connected to your computer!</p>
+                    <ul class="no-connecting-area-nav">
+                        <li><a href="https://www.kickstarter.com/" target="_parent">Click if you haven't bought it yet!</a></li>
+                        <li><a href="https://casefife.com/" target="_parent">Let us know if you think there is a problem</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="app-center-area-creator">
+                <div class="app-center-area-control">
+                    <div class="app-center-area-control-head">IoT Control</div>
+                    <div class="app-center-area-control-contain">
+                        <div class="app-center-area-control-contain-item-device">
+                            <div class="app-center-area-control-contain-item-device-name">Philips Hue Play <div class="app-center-area-control-contain-item-device-name-settings"><i class="fa-solid fa-sliders"></i></div> </div>
+                            <div class="app-center-area-control-contain-item-device-img"><img src="img/hue.png" alt=""></div>
+                            <div class="app-center-area-control-contain-item-device-control">
+                                <div class="app-center-area-control-contain-item-device-control-brightness"><i class="fa-solid fa-lightbulb"></i><div id="brightnessValue" class="value">%100</div></div>
+                                <div class="app-center-area-control-contain-item-device-control-switch">
+                                    <input id="app-center-area-control-contain-item-device-control-switch-toggle" class="app-center-area-control-contain-item-device-control-switch-toggle" type="checkbox" checked="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-center-area-control-contain-item-add">
+                            <i class="fa-solid fa-plus"></i>
+                            <span>Add IoT Device</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-center-area-bottom">
+
+                <div class="app-center-area-bottom-item">
+                    <div class="app-center-area-bottom-item-connect"><span id="status"></span></div>
+                </div>
+
+                <div class="app-center-area-bottom-item">
+                    <input id="app-center-area-bottom-item-light-toggle" class="app-center-area-bottom-item-toggle" type="checkbox" checked>
+                    <label for="keyboard-lights">KEYBOARD LIGHTS</label>
+                </div>
+
+                <div class="app-center-area-bottom-item">
+                    <input id="app-center-area-bottom-item-function-toggle" class="app-center-area-bottom-item-toggle" type="checkbox"  >
+                    <label for="disable-funcitons">DISABLE ALL FUNCTIONS</label>
+                </div>
+
+                <div class="app-center-area-bottom-item-right"><a href="https://discord.gg/J3zs3EUQPN" target="parent"><i class="fa-brands fa-discord"></i> JOIN OUR COMMUNITY!</a></div>
+            </div>
+        </div>
+
+        <script src="renderer.js"></script>
+        <script>
+            function navigateTo(page) {
+                window.location.href = page;
+            }
+
+            let lightBrightness = 100;
+            let previousData = '';
+
+            const brightnessValue = document.getElementById("brightnessValue");
+
+            ipcRenderer.on('serial-port-data', (event, data) => {
+                const dataSp = data.toString().trim();
+
+                const lightToggle = document.getElementById("app-center-area-control-contain-item-device-control-switch-toggle");
+                
+                if(dataSp === "BTN22") {
+                    if(lightToggle.checked == true) {
+                        lightToggle.checked = false;
+                    }else {
+                        lightToggle.checked = true;
+                    }
+                }
+
+                if(dataSp === "RE40" && lightBrightness >= 0) {
+                    if (previousData === 'RE40') {
+                        lightBrightness = Math.max(0, lightBrightness - 1);
+                        brightnessValue.textContent = "% " + lightBrightness;
+                    }
+                }else if(dataSp === "RE45" && lightBrightness <= 99) {
+                    lightBrightness += 1;
+                    brightnessValue.textContent = "% " + lightBrightness;
+                }
+
+                previousData = dataSp;
+            });
+        </script>
+</body>
+</html>

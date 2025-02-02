@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Casefife Prodeck - V1.0</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+</head>
+<body>
+    <div id="intro" class="intro">
+        <img src="img/cf-white.png" oncontextmenu="return false"  onselectstart="return false" ondragstart="return false" />
+        <div class="lds-ripple"><div></div><div></div></div>
+    </div>
+    <div class="app">
+        <div class="app-left-area">
+            <div class="app-left-area-top">
+                <img src="img/cf-white.png" oncontextmenu="return false"  onselectstart="return false" ondragstart="return false"/>
+                <h1>CASEFIFE Inc. - V1.0</h1>
+            </div>
+            <div class="app-left-area-menu">
+                <button onclick="navigateTo('index.html')" class="app-left-area-menu-item app-left-area-menu-item-active"><i class="fa-solid fa-wand-magic-sparkles"></i> CREATOR</button>
+                <button onclick="navigateTo('sound-effect.html')" class="app-left-area-menu-item"><i class="fa-solid fa-music"></i> SOUND EFFECT</button>
+                <!--<button disabled onclick="navigateTo('sound-effect.html')" class="app-left-area-menu-item disabled"><i class="fa-solid fa-microphone"></i> VOICE CHANGER</button>-->
+                <button onclick="navigateTo('control.html')" class="app-left-area-menu-item"><i class="fa-solid fa-sliders"></i> CONTROL</button>
+                <!--<button class="app-left-area-menu-item"><i class="fa-solid fa-wave-square"></i> MIDI</button>-->
+                <!--<button class="app-left-area-menu-item"><i class="fa-solid fa-table-cells"></i> LAUNCHPAD</button>-->
+                <button onclick="navigateTo('settings.html')" class="app-left-area-menu-item"><i class="fa-solid fa-gear"></i> SETTINGS</button>
+            </div>
+            <div class="app-left-area-bottom-account">
+                <div class="app-left-area-bottom-account-img">
+                    <img src="img/profile.webp" oncontextmenu="return false"  onselectstart="return false" ondragstart="return false"/>
+                </div>
+                <button class="app-left-area-bottom-account-detail">
+                    <h3>Olci</h3>
+                    <p>@olcaykuytak</p>
+                </button>
+            </div>
+        </div>
+        <div class="app-center-area">
+            <div id="no-connecting" class="no-connecting">
+                <div class="no-connecting-area">
+                    <div class="no-connecting-area-brand"><img src="img/cf-white.png" alt=""></div>
+                    <p>Your <b>Casefife Prodeck</b> device is not connected to your computer!</p>
+                    <ul class="no-connecting-area-nav">
+                        <li><a href="https://www.kickstarter.com/" target="_parent">Click if you haven't bought it yet!</a></li>
+                        <li><a href="https://casefife.com/" target="_parent">Let us know if you think there is a problem</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="keybind-area" class="keybind-area">
+                <div class="keybind-area-head">
+                    <h2>Define the macro key by pressing the following keyboard keys</h2>
+                    <hr>
+                </div>
+                <div class="keybind-area-keyboard">
+                    <div class="keybind-area-keyboard-select">
+                        <div class="keybind-area-keyboard-select-text">Assign a key:</div>
+                        <div class="keybind-area-keyboard-select-input">SET KEYBIND</div>
+                        <div id="keybindSave" class="keybind-area-keyboard-select-save">SAVE KEYBIND</div>
+                        <div id="keybindClose" class="keybind-area-keyboard-select-close">CLOSE</div>
+                    </div>
+                    <div class="keybind-area-keyboard-info">Select the key you want to define:</div>
+                    <div class="keybind-area-keyboard-list">
+                        <div class="keybind-area-keyboard-list-item">F1</div>
+                        <div class="keybind-area-keyboard-list-item">F2</div>
+                        <div class="keybind-area-keyboard-list-item">F3</div>
+                        <div class="keybind-area-keyboard-list-item">F4</div>
+                        <div class="keybind-area-keyboard-list-item">F5</div>
+                        <div class="keybind-area-keyboard-list-item">F6</div>
+                        <div class="keybind-area-keyboard-list-item">F7</div>
+                        <div class="keybind-area-keyboard-list-item">F8</div>
+                        <div class="keybind-area-keyboard-list-item">F9</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">F11</div>
+                        <div class="keybind-area-keyboard-list-item">F12</div>
+                        <div class="keybind-area-keyboard-list-item">F13</div>
+                        <div class="keybind-area-keyboard-list-item">F14</div>
+                        <div class="keybind-area-keyboard-list-item">F15</div>
+                        <div class="keybind-area-keyboard-list-item">F16</div>
+                        <div class="keybind-area-keyboard-list-item">F17</div>
+                        <div class="keybind-area-keyboard-list-item">F18</div>
+                        <div class="keybind-area-keyboard-list-item">F19</div>
+                        <div class="keybind-area-keyboard-list-item">F20</div>
+                        <div class="keybind-area-keyboard-list-item">F21</div>
+                        <div class="keybind-area-keyboard-list-item">F22</div>
+                        <div class="keybind-area-keyboard-list-item">F23</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">ALT</div>
+                        <div class="keybind-area-keyboard-list-item">SHIFT</div>
+                        <div class="keybind-area-keyboard-list-item">BACKSPACE</div>
+                        <div class="keybind-area-keyboard-list-item">ARROW UP</div>
+                        <div class="keybind-area-keyboard-list-item">ARROW DOWN</div>
+                        <div class="keybind-area-keyboard-list-item">ARROW LEFT</div>
+                        <div class="keybind-area-keyboard-list-item">ARROW RIGHT</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE DOWN</div>
+                        <div class="keybind-area-keyboard-list-item">HOME</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                        <div class="keybind-area-keyboard-list-item">PAGE UP</div>
+                        <div class="keybind-area-keyboard-list-item">CTRL</div>
+                        <div class="keybind-area-keyboard-list-item">F10</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-center-area-creator">
+                <div class="app-center-area-creator-volume">
+
+                    <div class="app-center-area-creator-volume-head">Volume Mixer</div>
+
+                    <div class="app-center-area-creator-volume-items">
+
+                        <div class="app-center-area-creator-volume-items-part">
+
+                            <div class="app-center-area-creator-volume-items-part-list">
+                                <select id="chOneAppList" class="app-center-area-creator-volume-items-part-list-apps">
+                                    <option value="none" selected>Choose An App</option>
+                                    <option value="master-audio">Master Audio</option>
+                                </select>
+                            </div>
+
+                            <div class="app-center-area-creator-volume-items-part-bar">
+                                <div class="app-center-area-creator-volume-items-part-bar-back">
+                                    <div id="ch1Bar" class="app-center-area-creator-volume-items-part-bar-top"></div>
+                                </div>
+                            </div>
+
+                            <div class="app-center-area-creator-volume-items-part-id"><h1>CH1</h1></div>
+
+                            <div class="app-center-area-creator-volume-items-part-mute">
+                                <div id="ch1Btn" class="app-center-area-creator-volume-items-part-mute-btn"><i class="fa-solid fa-volume-xmark"></i></div>
+                            </div>
+                        </div>
+
+                        <div class="app-center-area-creator-volume-items-part">
+
+                            <div class="app-center-area-creator-volume-items-part-list">
+                                <select id="chTwoAppList" class="app-center-area-creator-volume-items-part-list-apps">
+                                    <option value="none" selected>Choose An App</option>
+                                    <option value="master-audio">Master Audio</option>
+                                </select>
+                            </div>
+
+                            <div class="app-center-area-creator-volume-items-part-bar">
+                                <div class="app-center-area-creator-volume-items-part-bar-back">
+                                    <div id="ch2Bar" class="app-center-area-creator-volume-items-part-bar-top"></div>
+                                </div>
+                            </div>
+
+                            <div class="app-center-area-creator-volume-items-part-id"><h1>CH2</h1></div>
+                            <div class="app-center-area-creator-volume-items-part-mute">
+                                <div id="ch2Btn" class="app-center-area-creator-volume-items-part-mute-btn"><i class="fa-solid fa-volume-xmark"></i></div>
+                            </div>
+                        </div>
+
+                        <div class="app-center-area-creator-volume-items-part">
+
+                            <div class="app-center-area-creator-volume-items-part-list">
+                                <select id="chThreeAppList" class="app-center-area-creator-volume-items-part-list-apps">
+                                    <option value="none" selected>Choose An App</option>
+                                    <option value="master-audio">Master Audio</option>
+                                </select>
+                            </div>
+
+                            <div class="app-center-area-creator-volume-items-part-bar">
+                                <div class="app-center-area-creator-volume-items-part-bar-back">
+                                    <div id="ch3Bar" class="app-center-area-creator-volume-items-part-bar-top"></div>
+                                </div>
+                            </div>
+
+                            <div class="app-center-area-creator-volume-items-part-id"><h1>CH3</h1></div>
+                            <div class="app-center-area-creator-volume-items-part-mute">
+                                <div id="ch3Btn" class="app-center-area-creator-volume-items-part-mute-btn"><i class="fa-solid fa-volume-xmark"></i></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="app-center-area-creator-macro">
+                    <div class="app-center-area-creator-volume-head">Macro Keys</div>
+
+                    <div class="app-center-area-creator-macro-btn">
+
+                        <div id="macroBtn" class="app-center-area-creator-macro-btn-items">
+                            <div id="macroBtn1" class="app-center-area-creator-macro-btn-items-inner">
+                                <i class="fa-solid fa-keyboard"></i>
+                                <div class="app-center-area-creator-macro-btn-items-inner-shortcut">b</div>
+                            </div>
+                        </div>
+
+                        <div id="macroBtn" class="app-center-area-creator-macro-btn-items">
+                            <div id="macroBtn2" class="app-center-area-creator-macro-btn-items-inner">
+                                <i class="fa-solid fa-keyboard"></i>
+                                <div class="app-center-area-creator-macro-btn-items-inner-shortcut">m</div>
+                            </div>
+                        </div>
+
+                        <div id="macroBtn" class="app-center-area-creator-macro-btn-items">
+                            <div id="macroBtn3" class="app-center-area-creator-macro-btn-items-inner">
+                                <i class="fa-solid fa-keyboard"></i>
+                                <div class="app-center-area-creator-macro-btn-items-inner-shortcut">F15</div>
+                            </div>
+                        </div>
+
+                        <div id="macroBtn" class="app-center-area-creator-macro-btn-items">
+                            <div id="macroBtn4" class="app-center-area-creator-macro-btn-items-inner">
+                                <i class="fa-solid fa-keyboard"></i>
+                                <div class="app-center-area-creator-macro-btn-items-inner-shortcut">F16</div>
+                            </div>
+                        </div>
+
+                        <div id="macroBtn" class="app-center-area-creator-macro-btn-items">
+                            <div id="macroBtn5" class="app-center-area-creator-macro-btn-items-inner">
+                                <i class="fa-solid fa-keyboard"></i>
+                                <div class="app-center-area-creator-macro-btn-items-inner-shortcut">F17</div>
+                            </div>
+                        </div>
+
+                        <div id="macroBtn" class="app-center-area-creator-macro-btn-items">
+                            <div id="macroBtn6" class="app-center-area-creator-macro-btn-items-inner">
+                                <i class="fa-solid fa-keyboard"></i>
+                                <div class="app-center-area-creator-macro-btn-items-inner-shortcut">F18</div>
+                            </div>
+                        </div>
+
+                        <div id="macroBtn" class="app-center-area-creator-macro-btn-items">
+                            <div id="macroBtn7" class="app-center-area-creator-macro-btn-items-inner">
+                                <i class="fa-solid fa-keyboard"></i>
+                                <div class="app-center-area-creator-macro-btn-items-inner-shortcut">F19</div>
+                            </div>
+                        </div>
+
+                        <div id="macroBtn" class="app-center-area-creator-macro-btn-items">
+                            <div id="macroBtn8" class="app-center-area-creator-macro-btn-items-inner">
+                                <i class="fa-solid fa-keyboard"></i>
+                                <div class="app-center-area-creator-macro-btn-items-inner-shortcut">F20</div>
+                            </div>
+                        </div>
+
+                        <div id="macroBtn" class="app-center-area-creator-macro-btn-items">
+                            <div id="macroBtn9" class="app-center-area-creator-macro-btn-items-inner">
+                                <i class="fa-solid fa-keyboard"></i>
+                                <div class="app-center-area-creator-macro-btn-items-inner-shortcut">F21</div>
+                            </div>
+                        </div>
+
+                        <div id="macroBtn" class="app-center-area-creator-macro-btn-items">
+                            <div id="macroBtn10" class="app-center-area-creator-macro-btn-items-inner">
+                                <i class="fa-solid fa-keyboard"></i>
+                                <div class="app-center-area-creator-macro-btn-items-inner-shortcut">F22</div>
+                            </div>
+                        </div>
+
+                        <div id="macroBtn" class="app-center-area-creator-macro-btn-items">
+                            <div id="macroBtn11" class="app-center-area-creator-macro-btn-items-inner">
+                                <i class="fa-solid fa-keyboard"></i>
+                                <div class="app-center-area-creator-macro-btn-items-inner-shortcut">F23</div>
+                            </div>
+                        </div>
+
+                        <div id="macroBtn" class="app-center-area-creator-macro-btn-items">
+                            <div id="macroBtn12" class="app-center-area-creator-macro-btn-items-inner">
+                                <i class="fa-solid fa-keyboard"></i>
+                                <div class="app-center-area-creator-macro-btn-items-inner-shortcut">F24</div>
+                            </div>
+                        </div>
+
+                        <div id="macroBtn" class="app-center-area-creator-macro-btn-items">
+                            <div id="macroBtn13" class="app-center-area-creator-macro-btn-items-inner">
+                                <i class="fa-solid fa-keyboard"></i>
+                                <div class="app-center-area-creator-macro-btn-items-inner-shortcut">F25</div>
+                            </div>
+                        </div>
+
+                        <div id="macroBtn" class="app-center-area-creator-macro-btn-items">
+                            <div id="macroBtn14" class="app-center-area-creator-macro-btn-items-inner">
+                                <i class="fa-solid fa-keyboard"></i>
+                                <div class="app-center-area-creator-macro-btn-items-inner-shortcut">F26</div>
+                            </div>
+                        </div>
+
+                        <div id="macroBtn" class="app-center-area-creator-macro-btn-items">
+                            <div id="macroBtn15" class="app-center-area-creator-macro-btn-items-inner">
+                                <i class="fa-solid fa-keyboard"></i>
+                                <div class="app-center-area-creator-macro-btn-items-inner-shortcut">F27</div>
+                            </div>
+                        </div>
+
+                        <div id="macroBtn" class="app-center-area-creator-macro-btn-items">
+                            <div id="macroBtn16" class="app-center-area-creator-macro-btn-items-inner">
+                                <i class="fa-solid fa-keyboard"></i>
+                                <div class="app-center-area-creator-macro-btn-items-inner-shortcut">F28</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                <div class="app-center-area-creator-spin">
+                    <div class="app-center-area-creator-volume-head">Spin Handle</div>
+
+                    <div class="app-center-area-creator-spin-items">
+                        <div class="app-center-area-creator-spin-items-part">
+                            <button id="macroBtn17" class="app-center-area-creator-spin-items-part-left">
+                                <i class="fa-solid fa-rotate-left"></i>
+                                <div class="app-center-area-creator-spin-items-part-shortcut">ARROW LEFT</div>
+                            </button>
+                            <button id="macroBtn18" class="app-center-area-creator-spin-items-part-right">
+                                <i class="fa-solid fa-rotate-right"></i>
+                                <div class="app-center-area-creator-spin-items-part-shortcut">ARROW RIGHT</div>
+                            </button>
+                        </div>
+
+                        <div class="app-center-area-creator-spin-items-part">
+                            <button id="macroBtn19" class="app-center-area-creator-spin-items-part-left">
+                                <i class="fa-solid fa-rotate-left"></i>
+                                <div class="app-center-area-creator-spin-items-part-shortcut">ARROW UP</div>
+                            </button>
+                            <button id="macroBtn20" class="app-center-area-creator-spin-items-part-right">
+                                <i class="fa-solid fa-rotate-right"></i>
+                                <div class="app-center-area-creator-spin-items-part-shortcut">ARROW DOWN</div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-center-area-bottom">
+
+                <div class="app-center-area-bottom-item">
+                    <div class="app-center-area-bottom-item-connect"><span id="status"></span></div>
+                </div>
+
+                <div class="app-center-area-bottom-item">
+                    <input id="app-center-area-bottom-item-light-toggle" class="app-center-area-bottom-item-toggle" type="checkbox" checked>
+                    <label for="keyboard-lights">KEYBOARD LIGHTS</label>
+                </div>
+
+                <div class="app-center-area-bottom-item">
+                    <input id="app-center-area-bottom-item-function-toggle" class="app-center-area-bottom-item-toggle" type="checkbox"  >
+                    <label for="disable-funcitons">DISABLE ALL FUNCTIONS</label>
+                </div>
+
+                <div class="app-center-area-bottom-item-right"><a href="https://discord.gg/J3zs3EUQPN" target="parent"><i class="fa-brands fa-discord"></i> JOIN OUR COMMUNITY!</a></div>
+            </div>
+        </div>
+
+    <script src="renderer.js"></script>
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+        
+        const { NodeAudioVolumeMixer } = require("node-audio-volume-mixer");
+        const sessions = NodeAudioVolumeMixer.getAudioSessionProcesses();
+
+        const macroMap = {
+            "BTN2": "macroBtn1",
+            "BTN4": "macroBtn2",
+            "BTN6": "macroBtn3",
+            "BTN8": "macroBtn4",
+            "BTN10": "macroBtn5",
+            "BTN12": "macroBtn6",
+            "BTN14": "macroBtn7",
+            "BTN16": "macroBtn8",
+            "BTN18": "macroBtn9",
+            "BTN20": "macroBtn10",
+            "BTN22": "macroBtn11",
+            "BTN24": "macroBtn12",
+            "BTN26": "macroBtn13",
+            "BTN28": "macroBtn14",
+            "BTN30": "macroBtn15",
+            "BTN32": "macroBtn16",
+            "RE45": "macroBtn17",
+            "RE40": "macroBtn18",
+            "RE55": "macroBtn19",
+            "RE50": "macroBtn20"
+        };
+        
+        function updateAppList(appListChName) {
+          const sessions = NodeAudioVolumeMixer.getAudioSessionProcesses();
+          const existingOptions = Array.from(appListChName.options).map((option) => option.value);
+          for (let i = 0; i < appListChName.options.length; i++) {
+            const option = appListChName.options[i];
+            if (option.value === "master-audio" || option.value === "none") {
+              continue;
+            }
+            if (!sessions.find((item) => item.name.trim() === option.value)) {
+              appListChName.removeChild(option);
+            }
+          }
+        
+          sessions.forEach((value) => {
+            if (value.name !== "" && !existingOptions.includes(value.name)) {
+              const option = document.createElement("option");
+              option.text = value.name;
+              option.value = value.name;
+              if (option.value !== "none") {
+                appListChName.add(option);
+                existingOptions.push(value.name);
+              }
+            }
+          });
+        }
+
+        setInterval(() => { updateAppList(chOneAppList); }, 1000);
+        setInterval(() => { updateAppList(chTwoAppList); }, 1000);
+        setInterval(() => { updateAppList(chThreeAppList); }, 1000);
+
+        const chOneAppList = document.getElementById("chOneAppList");
+        let audioChannelOneSelectApp = ' ';
+        chOneAppList.addEventListener('change', function() {
+            audioChannelOneSelectApp = document.getElementById("chOneAppList").value;
+        });
+
+        const chTwoAppList = document.getElementById("chTwoAppList");
+        let audioChannelTwoSelectApp = ' ';
+        chTwoAppList.addEventListener('change', function() {
+            audioChannelTwoSelectApp = document.getElementById("chTwoAppList").value;
+        });
+
+        const chThreeAppList = document.getElementById("chThreeAppList");
+        let audioChannelThreeSelectApp = ' ';
+        chThreeAppList.addEventListener('change', function() {
+            audioChannelThreeSelectApp = document.getElementById("chThreeAppList").value;
+        });
+
+        function masterAudioControl(VolData, MuteData) {
+            let VolDatas = VolData / 100;
+            let masterDataMute = MuteData;
+            if(Number.isNaN(VolDatas)) {
+                if (masterDataMute === 0) {
+                    NodeAudioVolumeMixer.muteMaster(false);
+                } else if (masterDataMute === 1) {
+                    NodeAudioVolumeMixer.muteMaster(true);
+                } else {
+                    console.error("Geçersiz masterDataMute değeri:", masterDataMute);
+                    NodeAudioVolumeMixer.setMasterVolumeLevelScalar(VolDatas);
+                }
+            }
+            if (typeof VolDatas === 'number' && !isNaN(VolDatas) && VolDatas >= 0 && VolDatas <= 1) {
+                if(masterDataMute === 0) {
+                    //console.log("Ayarlanan ses seviyesi:", VolDatas + "  |  " + masterDataMute);
+                    NodeAudioVolumeMixer.muteMaster(false);
+                    NodeAudioVolumeMixer.setMasterVolumeLevelScalar(VolDatas);
+                }else if (masterDataMute === 1) {
+                    NodeAudioVolumeMixer.setMasterVolumeLevelScalar(VolDatas);
+                    NodeAudioVolumeMixer.muteMaster(true);
+                }else {
+                    NodeAudioVolumeMixer.setMasterVolumeLevelScalar(VolDatas);
+                }
+            } else {
+                console.error("VolDatas geçerli değil:", VolDatas + "  |  " + masterDataMute);
+                return;
+            }
+        }
+
+        function appAudioControl(selectedApp, AppVolData, AppMuteData) {
+            let AppVolDatas = AppVolData / 100;
+            let AppMuteDatas = AppMuteData;
+            let AudioChSession = sessions.find((value) => {
+                return value.name === selectedApp;
+            });
+            if(Number.isNaN(AppVolDatas)) {
+                if (AppMuteDatas === 0) {
+                    NodeAudioVolumeMixer.setAudioSessionMute(AudioChSession.pid, false);
+                } else if (AppMuteDatas === 1) {
+                    NodeAudioVolumeMixer.setAudioSessionMute(AudioChSession.pid, true);
+                } else {
+                    console.error("Geçersiz AppMuteDatas değeri:", AppMuteDatas);
+                }
+            }
+            if (typeof AppVolDatas === 'number' && !isNaN(AppVolDatas) && AppVolDatas >= 0 && AppVolDatas <= 1) {
+                if (AppMuteDatas === 0) {
+                    //console.log("Ayarlanan ses seviyesi:", AppVolDatas + "  |  " + AppMuteDatas);
+                    NodeAudioVolumeMixer.setAudioSessionMute(AudioChSession.pid, false);
+                    NodeAudioVolumeMixer.setAudioSessionVolumeLevelScalar(AudioChSession.pid, AppVolDatas);
+                }else if (AppMuteDatas === 1) {
+                    NodeAudioVolumeMixer.setAudioSessionVolumeLevelScalar(AudioChSession.pid, AppVolDatas);
+                    NodeAudioVolumeMixer.setAudioSessionMute(AudioChSession.pid, true);
+                }else {
+                    NodeAudioVolumeMixer.setAudioSessionVolumeLevelScalar(AudioChSession.pid, AppVolDatas);
+                }
+            } else {
+                console.error("VolDatas geçerli değil:", AppVolDatas + "  |  " + AppMuteDatas);
+                return;
+            }
+        }
+
+        ipcRenderer.on('serial-port-data', (event, data) => {
+            const dataSp = data.toString().trim();
+
+            //**OneChannel DATA**
+            if(dataSp.startsWith('NPD')) {
+                NPDvalue = parseInt(dataSp.slice(3), 10);
+                if (!isNaN(NPDvalue) && NPDvalue >= 0 && NPDvalue <= 100) {
+                    ch1Bar.style.height = `${NPDvalue}%`;
+                }
+            }
+
+            if (dataSp.startsWith('MTN')) {
+                MTNdata = parseInt(dataSp.slice(3), 10);
+                if(MTNdata == 0){
+                  ch1Bar.classList.remove("chMute");
+                  ch1Btn.classList.remove("chMute");
+                }else {
+                  ch1Bar.classList.add("chMute");
+                  ch1Btn.classList.add("chMute");
+                }
+            }
+
+            if(audioChannelOneSelectApp === 'master-audio' && audioChannelOneSelectApp !== ' ' && audioChannelOneSelectApp !== 'none') {
+                masterAudioControl(NPDvalue, MTNdata);
+            }else if (audioChannelOneSelectApp !== 'master-audio' && audioChannelOneSelectApp !== ' ' && audioChannelOneSelectApp !== 'none') {
+                appAudioControl(audioChannelOneSelectApp, NPDvalue, MTNdata);
+            }
+
+            //**TwoChannel DATA**
+            if(dataSp.startsWith('WPD')) {
+                WPDvalue = parseInt(dataSp.slice(3), 10);
+                if (!isNaN(WPDvalue) && WPDvalue >= 0 && WPDvalue <= 100) {
+                    ch2Bar.style.height = `${WPDvalue}%`;
+                }
+            }
+
+            if (dataSp.startsWith('MTW')) {
+                MTWdata = parseInt(dataSp.slice(3), 10);
+                if(MTWdata == 0){
+                  ch2Bar.classList.remove("chMute");
+                  ch2Btn.classList.remove("chMute");
+                }else {
+                  ch2Bar.classList.add("chMute");
+                  ch2Btn.classList.add("chMute");
+                }
+            }
+
+            if(audioChannelTwoSelectApp === 'master-audio' && audioChannelTwoSelectApp !== ' ' && audioChannelTwoSelectApp !== 'none') {
+                masterAudioControl(WPDvalue, MTWdata);
+            }else if (audioChannelTwoSelectApp !== 'master-audio' && audioChannelTwoSelectApp !== ' ' && audioChannelTwoSelectApp !== 'none') {
+                appAudioControl(audioChannelTwoSelectApp, WPDvalue, MTWdata);
+            }
+
+            //**ThreeChannel DATA**
+            if(dataSp.startsWith('HPD')) {
+                HPDvalue = parseInt(dataSp.slice(3), 10);
+                if (!isNaN(HPDvalue) && HPDvalue >= 0 && HPDvalue <= 100) {
+                    ch3Bar.style.height = `${HPDvalue}%`;
+                }
+            }
+
+            if (dataSp.startsWith('MTH')) {
+                MTHdata = parseInt(dataSp.slice(3), 10);
+                if(MTHdata == 0){
+                  ch3Bar.classList.remove("chMute");
+                  ch3Btn.classList.remove("chMute");
+                }else {
+                  ch3Bar.classList.add("chMute");
+                  ch3Btn.classList.add("chMute");
+                }
+            }
+
+            if(audioChannelThreeSelectApp === 'master-audio' && audioChannelThreeSelectApp !== ' ' && audioChannelThreeSelectApp !== 'none') {
+                masterAudioControl(HPDvalue, MTHdata);
+            }else if (audioChannelThreeSelectApp !== 'master-audio' && audioChannelThreeSelectApp !== ' ' && audioChannelThreeSelectApp !== 'none') {
+                appAudioControl(audioChannelThreeSelectApp, HPDvalue, MTHdata);
+            }
+
+            //MacroBtn----------------------------------------------------------------
+            if (macroMap.hasOwnProperty(dataSp )) {
+                var elements = document.querySelectorAll('.app-center-area-creator-macro-btn-items-inner-active');
+                elements.forEach(function(element) {
+                    element.classList.remove('app-center-area-creator-macro-btn-items-inner-active');
+                });
+            
+                var macroCls = document.getElementById(macroMap[dataSp ]);
+                macroCls.classList.add("app-center-area-creator-macro-btn-items-inner-active");
+            
+                setTimeout(function() {
+                    macroCls.classList.remove("app-center-area-creator-macro-btn-items-inner-active");
+                }, 250);
+            
+                ipcRenderer.send(macroMap[dataSp]);
+            }
+        });
+
+        const keybindArea = document.getElementById("keybind-area");
+        const macroBtns = document.querySelectorAll("#macroBtn");
+
+        macroBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                keybindArea.style.display = "block";
+            });
+        });
+
+        const keybindClose = document.getElementById("keybindClose");
+
+        keybindClose.addEventListener('click', function() {
+            keybindArea.style.display = "none";
+        });
+
+    </script>
+</body>
+</html>

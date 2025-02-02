@@ -1,0 +1,188 @@
+.settings-area {
+    width: 650px;
+    height: 115%;
+}
+
+.settings-main-head {
+    margin-bottom: 20px;
+    width: 100%;
+    padding-bottom: 15px;
+    color: rgba(255, 255, 255, .25);
+    font-weight: 500;
+    font-size: 21px;
+    border-bottom: 1px solid #1E2126;
+    font-weight: bold;
+}
+
+.settings-area-set-head {
+    display: flex;
+    align-items: start;
+    font-size: 14px;
+    color: rgba(255, 255, 255, .25);
+    font-weight: 900;
+    width: 170px;
+}
+
+.settings-area-set:first-child .settings-area-set-head {
+    align-items: center !important;
+}
+
+.settings-area-set {
+    display: flex;
+    grid-gap: 25px;
+    margin-bottom: 25px;
+}
+
+.keyboard-light-mode {
+    color: rgba(255, 255, 255, .75);
+    font-size: 10pt;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, .1);
+    padding: 20px;
+    border-radius: 5px;
+    width: 125px;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+    position: relative;
+}
+
+.keyboard-light-mode:hover {
+    opacity: 0.6;
+}
+
+.keyboard-light-mode i {
+    position: absolute;
+    right: 15px;
+    font-weight: bold;
+}
+
+.keyboard-light-mode-list {
+    display: none;
+    position: absolute;
+    top: 147px;
+    width: 165px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #212121;
+}
+
+.keyboard-light-mode-list-active {
+    display: block;
+}
+
+.keyboard-light-mode-list-item {
+    font-weight: bold;
+    padding: 15px;
+    color: rgba(255, 255, 255, .2);
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+}
+
+.keyboard-light-mode-list-item:hover {
+    background-color: rgba(255, 255, 255, .03);
+}
+
+.settings-area-set-input-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.settings-area-set-input-buttons-item {
+    width: 86px;
+    height: 86px;
+    border: 6px solid #262626;
+    background-color: #E65100;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #ffffffd1;
+}
+
+.settings-area-set-input-buttons-item:hover {
+    opacity: 0.6;
+}
+
+.settings-right {
+    background-color: #ffffff0d;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 92vh;
+    width: 523px;
+    padding: 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.setting-select-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffffd1;
+    font-weight: 900;
+    font-size: 18pt;
+    height: 125px;
+    width: 125px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    border: 5px solid #262626;
+    background-color: #0e0e0e;
+}
+
+.setting-select-color-head {
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+
+.setting-select-colors {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 30px;
+}
+
+.setting-select-colors-item {
+    width: 45px;
+    height: 45px;
+    background-color: red;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+    border: 3px solid transparent;
+    box-sizing: border-box;
+}
+
+.setting-select-colors-item-active {
+    border: 3px solid #fff;
+    box-sizing: border-box;
+}
+
+.setting-select-colors-item:hover {
+    opacity: .6;
+}
+
+.setting-select-save {
+    background-color: #673AB7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 225px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+}
+
+.setting-select-save:hover {
+    opacity: .7;
+}
