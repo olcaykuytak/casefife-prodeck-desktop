@@ -1,4 +1,4 @@
-[![Casefife Prodeck Desktop Software ElectronJS Project](img/software.png)
+![Casefife Prodeck Desktop Software ElectronJS Project](img/software.png)
 
 # Casefife Prodeck Desktop Software ElectronJS Project
 
