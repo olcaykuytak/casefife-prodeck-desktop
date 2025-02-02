@@ -1,11 +1,10 @@
 # Casefife Prodeck Desktop Software ElectronJS Project
 
-<img src="img/product.jpg" alt="Casefife Prodeck Desktop Software ElectronJS Project" width="400" />
-
+<img src="img/product.JPG" alt="Casefife Prodeck Desktop Software ElectronJS Project" width="600" />
 
 CASEFIFE Prodeck is a customizable macro keyboard. Easily manage your live broadcasts with Prodeck. Quickly and easily control your computer's audio mixer. Gain complete mastery over your computer routines with the Prodeck device
 
-<img src="img/software.png" alt="Casefife Prodeck Desktop Software ElectronJS Project" width="400" />
+<img src="img/software.png" alt="Casefife Prodeck Desktop Software ElectronJS Project" width="600" />
 
 With the Casefife desktop software, you can easily customize your Prodeck device.
 
